@@ -6,7 +6,11 @@ import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.teamcode.Parts;
 
 public class BasicDrive implements Drive {
-    public void moveRobot(double x, double y, double yaw) {
+    public void fastSlowSpd(double fast, double slow) {
+        Parts.driveMaxSpd = fast;
+        Parts.driveSlwSpd = slow;
+    }
+    public void moveRobot(double x, double y, double yaw) { // power in the x, y, and turn directions
         // Calculate wheel powers.
         double leftFrontPower = x - y - yaw;
         double rightFrontPower = x + y + yaw;
@@ -32,18 +36,18 @@ public class BasicDrive implements Drive {
         Parts.BR.setPower(rightBackPower);
     }
 
-    public void feildCentric(Gamepad gamepad) {
+    public void feildCentric(Gamepad gamepad) { // yeah just put this in your teleOp
         double botHeading = Parts.imu.getRobotYawPitchRollAngles().getYaw(AngleUnit.RADIANS);
 
-        double vertical = -gamepad.left_stick_y * 1;
-        double horizontal = gamepad.left_stick_x * 1;
-        double pivot = gamepad.right_stick_x * 1;
+        double vertical = -gamepad.left_stick_y * Parts.driveMaxSpd;
+        double horizontal = gamepad.left_stick_x * Parts.driveMaxSpd;
+        double pivot = gamepad.right_stick_x * Parts.driveMaxSpd;
         double denominator = Math.max(Math.abs(vertical) + Math.abs(horizontal) + Math.abs(pivot), 1);
 
         if (gamepad.right_trigger > 0) {
-            vertical = -gamepad.left_stick_y * 0.5;
-            horizontal = gamepad.left_stick_x * 0.5;
-            pivot = gamepad.right_stick_x * 0.6;
+            vertical = -gamepad.left_stick_y * Parts.driveSlwSpd;
+            horizontal = gamepad.left_stick_x * Parts.driveSlwSpd;
+            pivot = gamepad.right_stick_x * (Parts.driveSlwSpd + 0.1);
         }
 
         // Kinematics (Counter-acting angle of robot's heading)

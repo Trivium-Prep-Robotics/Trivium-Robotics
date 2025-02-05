@@ -4,18 +4,22 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 import org.firstinspires.ftc.teamcode.Parts;
 
-public class NewArm implements Arm{
-    /* Set the arm power used */
+/**
+ * Knightmares arm class
+ */
+
+public class KnightmaresArm implements Arm{
+    // Set the arm power used
     public void armPower(double power) {
         Parts.armPower = power;
     }
 
-    /* Set the extend power used */
+    // Set the extend power used
     public void extendPower(double power) {
         Parts.extendPower = power;
     }
 
-    /* up movement methods for the arm */
+    // up movement methods for the arm
     public void up(boolean move) {
         if (move && !Parts.lims) {
             Parts.arm.setPower(Parts.armPower);
@@ -34,7 +38,7 @@ public class NewArm implements Arm{
         Parts.slide.setPower(0);
     }
 
-    /* down movement methods for the arm */
+    // down movement methods for the arm
     public void down(boolean move) {
         if (move && !Parts.lims) {
             Parts.arm.setPower(-Parts.armPower);
@@ -53,14 +57,14 @@ public class NewArm implements Arm{
         Parts.slide.setPower(0);
     }
 
-    /* method to check to stop the arm */
+    // method to check to stop the arm
     public void armStop(boolean stop) {
         if (stop) {
             Parts.arm.setPower(0);
         }
     }
 
-    /* extend movement methods for the arm */
+    // extend movement methods for the arm
     public void extend(double power) {
         if (power != 0 && !Parts.lims) {
             Parts.inEncoderS = false;
@@ -77,7 +81,7 @@ public class NewArm implements Arm{
         Parts.slide.setPower(0);
     }
 
-    /* retract movement methods for the arm */
+    // retract movement methods for the arm
     public void retract(double power) {
         if (power != 0 && !Parts.lims) {
             Parts.inEncoderS = false;
@@ -94,21 +98,21 @@ public class NewArm implements Arm{
         Parts.slide.setPower(0);
     }
 
-    /* method to stop the extention */
+    // method to stop the extention
     public void slideStop(boolean stop) {
         if (stop) {
             Parts.slide.setPower(0);
         }
     }
 
-    /* setting the arm ticks */
+    // setting the arm ticks
     public void setArm(int ticks) {
         Parts.inEncoderA = true;
 
         Parts.setArm = ticks;
     }
 
-    /* setting the slide ticks */
+    // setting the slide ticks
     public void setSlide(int ticks) {
         Parts.inEncoderS = true;
 
@@ -116,7 +120,7 @@ public class NewArm implements Arm{
 
     }
 
-    /* limit methods for the arm and extention */
+    // limit methods for the arm and extention
     public void armLims() {
         if ((Parts.arm.getCurrentPosition() < Parts.armHigh || Parts.arm.getCurrentPosition() < Parts.armHigh) && (Parts.arm.getCurrentPosition() > Parts.armLow)) {
             Parts.inEncoderA = false;
@@ -143,7 +147,7 @@ public class NewArm implements Arm{
         }
     }
 
-    /* methods to start encoders */
+    // methods to start encoders
     public void armGo() {
         if (Parts.inEncoderA) {
             Parts.arm.setMode(DcMotor.RunMode.RUN_USING_ENCODER);

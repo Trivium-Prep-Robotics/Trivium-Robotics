@@ -20,8 +20,23 @@ public class Parts {
     IMU.Parameters myIMUparameters;
 
     // TODO: any variables you use through out your code
-    // these are the ones we used, keep in mind these are also used in the parts methods
+    // variables you should have fs
     public static double ticksPerRev = 5281.1;
+
+    public static double armPower;
+    public static double extendPower;
+
+    public static double driveMaxSpd;
+    public static double driveSlwSpd;
+
+    public static double openClaw;
+    public static double closeClaw;
+
+    public static double sample;
+    public static double specimen;
+
+    // VERY KNIGHTMARES SPECIFIC
+
     public static double pivTPR = 5 * ticksPerRev;
     public static double slideTPR = 2 * ticksPerRev;
     public static int armLow = (int)(Parts.pivTPR * 0.00);
@@ -32,7 +47,6 @@ public class Parts {
     public static int setArm = 0;
     public static int setSlide = 0;
 
-
     public static double slideTicksZero = 0;
     public static double slidePose = 0;
 
@@ -40,15 +54,8 @@ public class Parts {
     public static boolean inEncoderA = false;
     public static boolean lims = false;
 
-    public static double armPower;
-    public static double extendPower;
+
     public static double armToExtend = 0.1;
-
-    public static double openClaw;
-    public static double closeClaw;
-
-    public static double sample;
-    public static double specimen;
 
     public Parts(HardwareMap hardwareMap) {
 
