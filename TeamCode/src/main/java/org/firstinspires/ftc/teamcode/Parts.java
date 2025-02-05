@@ -19,9 +19,8 @@ public class Parts {
     public static IMU imu;
     IMU.Parameters myIMUparameters;
 
-    /**
-     * important variables
-     */
+    // TODO: any variables you use through out your code
+    // these are the ones we used, keep in mind these are also used in the parts methods
     public static double ticksPerRev = 5281.1;
     public static double pivTPR = 5 * ticksPerRev;
     public static double slideTPR = 2 * ticksPerRev;
@@ -53,41 +52,35 @@ public class Parts {
 
     public Parts(HardwareMap hardwareMap) {
 
-        // assigning drive train motors
+        // TODO: assign drive train motors with config names
         FR = hardwareMap.get(DcMotor.class, "rightFront");
         FL = hardwareMap.get(DcMotor.class, "leftFront");
         BR = hardwareMap.get(DcMotor.class, "rightBack");
         BL = hardwareMap.get(DcMotor.class, "leftBack");
 
-        // reverse left side
+        // TODO: reverse a side
         FL.setDirection(DcMotorSimple.Direction.REVERSE);
         BL.setDirection(DcMotorSimple.Direction.REVERSE);
-        // when setPower(0) -> motors brake
+
+        // TODO: set zero power behavior
         FR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         FL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         BR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         FL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
-        // assigning arm
+        // TODO: assign other motors
         arm = hardwareMap.get(DcMotor.class, "arm");
-        arm.setDirection(DcMotorSimple.Direction.REVERSE);
-        arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        // assigning slides
         slide = hardwareMap.get(DcMotor.class, "slide");
-        slide.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        slide.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
-        // when setPower(0) -> motors brake
         arm.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         slide.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
-        // assigning claw and wrist servo
+        // TODO: assign servos
         claw = hardwareMap.get(Servo.class, "claw");
-        wrist = hardwareMap.get(ServoImplEx.class, "wrist");
+        wrist = hardwareMap.get(ServoImplEx.class, "wrist"); // allows for more commands
 
-        // IMU
+        // TODO: set up your IMU
         imu = hardwareMap.get(IMU.class, "imu"); // Initializing IMU in Drivers Hub
         // Reconfiguring IMU orientation
         myIMUparameters = new IMU.Parameters(
