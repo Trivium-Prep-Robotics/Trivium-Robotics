@@ -2,6 +2,10 @@ package org.firstinspires.ftc.teamcode.parts;
 
 import org.firstinspires.ftc.teamcode.Parts;
 
+/**
+ * Knightmares claw class
+ */
+
 public class GearClaw implements Claw {
     // setting the open and close positions for the claw
     public void openClosePose(double open, double close) {
