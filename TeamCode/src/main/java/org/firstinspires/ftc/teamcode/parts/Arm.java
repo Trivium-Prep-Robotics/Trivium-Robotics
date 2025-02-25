@@ -25,8 +25,8 @@ public interface Arm {
     public void slideStop(boolean stop);
 
     // methods for setting motor encoder position target
-    public void setArm(int ticks);
-    public void setSlide(int ticks);
+    public void setArm(double ticks);
+    public void setSlide(double ticks);
 
     // methods for limits
     public void armLims();
