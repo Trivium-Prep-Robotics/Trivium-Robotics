@@ -19,8 +19,8 @@ import org.firstinspires.ftc.teamcode.parts.KnightmaresArm;
 public class Observation extends LinearOpMode {
     public void runOpMode() throws InterruptedException {
         Parts robot = new Parts(hardwareMap); // configure robot
-        StateArm arm = new StateArm(); // arm class
-        GearClaw claw = new GearClaw(); // claw class
+        KnightmaresArm arm = new KnightmaresArm(); // arm class
+        KnightmaresClaw claw = new KnightmaresClaw(); // claw class
         BasicDrive drive = new BasicDrive(); // drive class
 
         claw.openClosePose(0.4, 0.8); // set claw positions

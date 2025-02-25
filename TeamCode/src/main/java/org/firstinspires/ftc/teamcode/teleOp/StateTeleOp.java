@@ -9,7 +9,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import org.firstinspires.ftc.teamcode.Parts;
 import org.firstinspires.ftc.teamcode.parts.KnightmaresArm;
 import org.firstinspires.ftc.teamcode.parts.KnightmaresClaw;
-import org.firstinspires.ftc.teamcode.parts.PedroDrive;
 import org.firstinspires.ftc.teamcode.util.pedroPathing.constants.FConstants;
 import org.firstinspires.ftc.teamcode.util.pedroPathing.constants.LConstants;
 
@@ -26,7 +25,6 @@ public class StateTeleOp extends LinearOpMode {
         Parts robot = new Parts(hardwareMap);
         KnightmaresArm arm = new KnightmaresArm();
         KnightmaresClaw claw = new KnightmaresClaw();
-        PedroDrive drive = new PedroDrive();
 
         Constants.setConstants(FConstants.class, LConstants.class);
         follower = new Follower(hardwareMap);
@@ -39,28 +37,22 @@ public class StateTeleOp extends LinearOpMode {
         Parts.slide.setTargetPosition(0);
         Parts.piv1.setTargetPosition(0);
         Parts.piv2.setTargetPosition(0);
-
         // set the power used for arm motors to 1
         arm.armPower(1);
         arm.extendPower(1);
-
         // set claw open and close positions
         //claw.openClosePose(0.35, 0.5);
         claw.openClosePose(0.375, 0.8); // I'm never letting jacob r touch this code again
         claw.sampSpecPose(0.2, 0.4);
-
         while (opModeIsActive()) {
-
             // arm controls
             arm.up(gamepad2.dpad_up);
             arm.down(gamepad2.dpad_down);
             arm.armStop(!(gamepad2.dpad_up || gamepad2.dpad_down));
-
             // extend controls
             arm.extend(gamepad2.right_trigger);
             arm.retract(gamepad2.left_trigger);
             arm.slideStop((gamepad2.left_trigger == 0 && gamepad2.right_trigger == 0 && !gamepad2.dpad_up && !gamepad2.dpad_down));
-
             // claw controls
             claw.grabs(gamepad2.right_bumper);
             claw.drops(gamepad2.left_bumper);

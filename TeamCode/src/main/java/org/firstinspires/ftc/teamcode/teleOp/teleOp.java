@@ -7,8 +7,8 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 
 import org.firstinspires.ftc.teamcode.Parts;
 import org.firstinspires.ftc.teamcode.parts.BasicDrive;
-import org.firstinspires.ftc.teamcode.parts.GearClaw;
-import org.firstinspires.ftc.teamcode.parts.StateArm;
+import org.firstinspires.ftc.teamcode.parts.KnightmaresArm;
+import org.firstinspires.ftc.teamcode.parts.KnightmaresClaw;
 
 
 /**
@@ -20,8 +20,8 @@ public class teleOp extends LinearOpMode {
 
     public void runOpMode() throws InterruptedException {
         Parts robot = new Parts(hardwareMap); // configure robot
-        StateArm arm = new StateArm(); // arm class
-        GearClaw claw = new GearClaw(); // claw class
+        KnightmaresArm arm = new KnightmaresArm(); // arm class
+        KnightmaresClaw claw = new KnightmaresClaw(); // claw class
         BasicDrive drive = new BasicDrive(); // drive class
 
         waitForStart(); // initialize
