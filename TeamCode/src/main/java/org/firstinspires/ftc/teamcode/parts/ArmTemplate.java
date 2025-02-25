@@ -104,13 +104,13 @@ public class ArmTemplate  implements Arm{
          */
     }
 
-    public void setArm(int ticks) {
+    public void setArm(double ticks) {
         /*
         Code to assign the target position of arm
          */
     }
 
-    public void setSlide(int ticks) {
+    public void setSlide(double ticks) {
         /*
         Code to assign the target position of slides
          */
