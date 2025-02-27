@@ -5,11 +5,21 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.teamcode.Parts;
 
-public class BasicDrive implements Drive {
+/**
+ * Honestly I'd recommend just using this class specially at the start of the season.
+ * In you're teleOp just set the speeds, and put feildCentric(gamepad1) or whatever gamepad you use for feildCentric movement
+ *
+ * If you advance more and say want to use Pedro pathing or Roadrunner I'd even say just don't use a class for drive, and just use it raw in your code
+ */
+
+public class DriveTemplate implements Drive {
+    // Setting the normal and slow speeds
     public void fastSlowSpd(double fast, double slow) {
         Parts.driveMaxSpd = fast;
         Parts.driveSlwSpd = slow;
     }
+
+    // for auto movement
     public void moveRobot(double x, double y, double yaw) { // power in the x, y, and turn directions
         // Calculate wheel powers.
         double leftFrontPower = x - y - yaw;
@@ -35,6 +45,8 @@ public class BasicDrive implements Drive {
         Parts.BL.setPower(leftBackPower);
         Parts.BR.setPower(rightBackPower);
     }
+
+    // for teleOp movement (field centric)
 
     public void feildCentric(Gamepad gamepad) { // yeah just put this in your teleOp
         double botHeading = Parts.imu.getRobotYawPitchRollAngles().getYaw(AngleUnit.RADIANS);
