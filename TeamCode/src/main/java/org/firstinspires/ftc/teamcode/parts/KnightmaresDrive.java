@@ -5,11 +5,14 @@ import com.qualcomm.robotcore.hardware.Gamepad;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.teamcode.Parts;
 
-public class BasicDrive implements Drive {
+public class KnightmaresDrive implements Drive {
+    // Setting the normal and slow speeds
     public void fastSlowSpd(double fast, double slow) {
         Parts.driveMaxSpd = fast;
         Parts.driveSlwSpd = slow;
     }
+    
+    // for auto movement
     public void moveRobot(double x, double y, double yaw) { // power in the x, y, and turn directions
         // Calculate wheel powers.
         double leftFrontPower = x - y - yaw;
@@ -36,6 +39,8 @@ public class BasicDrive implements Drive {
         Parts.BR.setPower(rightBackPower);
     }
 
+    // for teleOp movement (field centric)
+    
     public void feildCentric(Gamepad gamepad) { // yeah just put this in your teleOp
         double botHeading = Parts.imu.getRobotYawPitchRollAngles().getYaw(AngleUnit.RADIANS);
 

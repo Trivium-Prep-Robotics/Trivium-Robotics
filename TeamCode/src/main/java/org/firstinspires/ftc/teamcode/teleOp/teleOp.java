@@ -2,11 +2,9 @@ package org.firstinspires.ftc.teamcode.teleOp;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Gamepad;
 
 import org.firstinspires.ftc.teamcode.Parts;
-import org.firstinspires.ftc.teamcode.parts.BasicDrive;
+import org.firstinspires.ftc.teamcode.parts.KnightmaresDrive;
 import org.firstinspires.ftc.teamcode.parts.KnightmaresArm;
 import org.firstinspires.ftc.teamcode.parts.KnightmaresClaw;
 
@@ -22,7 +20,7 @@ public class teleOp extends LinearOpMode {
         Parts robot = new Parts(hardwareMap); // configure robot
         KnightmaresArm arm = new KnightmaresArm(); // arm class
         KnightmaresClaw claw = new KnightmaresClaw(); // claw class
-        BasicDrive drive = new BasicDrive(); // drive class
+        KnightmaresDrive drive = new KnightmaresDrive(); // drive class
 
         waitForStart(); // initialize
 

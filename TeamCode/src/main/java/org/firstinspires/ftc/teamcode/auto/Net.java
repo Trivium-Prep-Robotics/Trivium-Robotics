@@ -1,11 +1,10 @@
 package org.firstinspires.ftc.teamcode.auto;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.teamcode.Parts;
-import org.firstinspires.ftc.teamcode.parts.BasicDrive;
+import org.firstinspires.ftc.teamcode.parts.KnightmaresDrive;
 import org.firstinspires.ftc.teamcode.parts.KnightmaresClaw;
 import org.firstinspires.ftc.teamcode.parts.KnightmaresArm;
 
@@ -21,7 +20,7 @@ public class Net extends LinearOpMode {
         Parts robot = new Parts(hardwareMap); // configure robot
         KnightmaresArm arm = new KnightmaresArm(); // arm class
         KnightmaresClaw claw = new KnightmaresClaw(); // claw class
-        BasicDrive drive = new BasicDrive(); // drive class
+        KnightmaresDrive drive = new KnightmaresDrive(); // drive class
 
         claw.openClosePose(0.4, 0.8); // set claw positions
         claw.sampSpecPose(0.075, 0.6); // set wrist positions

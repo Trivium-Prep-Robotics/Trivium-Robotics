@@ -51,6 +51,8 @@ public class Parts {
     public static double armPower;
     public static double extendPower;
     public static double armToExtend = 0.1;
+    public static double driveMaxSpd = 1;
+    public static double driveSlwSpd = 0.5;
 
     public static double openClaw;
     public static double closeClaw;
