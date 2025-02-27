@@ -12,26 +12,22 @@ public class ArmTemplate  implements Arm{
     public void armPower(double power) {
         /*
         Set power variable
-        For example
          */
-        // Parts.armPower = power
     }
 
     public void extendPower(double power) {
         /*
         Set power variable
-        For example
          */
-
-        // Parts.extendPower = power
     }
 
     public void up(boolean move) {
-        /*
-        Move parameter is for the button used
-        Code to move arm up
-        For example:
-         */
+        if (move) {
+            /*
+            Move parameter is for the button used
+            Code to move arm up
+            */
+        }
     }
 
     public void up(int sec) throws InterruptedException{
@@ -43,11 +39,12 @@ public class ArmTemplate  implements Arm{
     }
 
     public void down(boolean move) {
-        /*
-        Move parameter is for the button used
-        Code to move arm down
-        For example:
-         */
+        if (move) {
+            /*
+            Move parameter is for the button used
+            Code to move arm down
+            */
+        }
     }
 
     public void down(int sec) throws InterruptedException{
@@ -59,18 +56,21 @@ public class ArmTemplate  implements Arm{
     }
 
     public void armStop(boolean stop) {
-        /*
-        Code to stop
-        the parameter is the condition to stop
-         */
+        if (stop) {
+            /*
+            Code to stop
+            the parameter is the condition to stop
+            */
+        }
     }
 
     public void extend(double power) {
-        /*
-        Move parameter is for the button used
-        Code to extend arm
-        For example:
-         */
+        if (power != 0) {
+            /*
+            Move parameter is for the button used
+            Code to extend arm
+             */
+        }
     }
 
     public void extend(int sec) throws InterruptedException{
@@ -82,11 +82,12 @@ public class ArmTemplate  implements Arm{
     }
 
     public void retract(double power) {
-        /*
-        Move parameter is for the button used
-        Code to retract arm
-        For example:
-         */
+        if (power != 0) {
+            /*
+            Move parameter is for the button used
+            Code to retract arm
+            */
+        }
     }
 
     public void retract(int sec) throws InterruptedException{
@@ -98,10 +99,12 @@ public class ArmTemplate  implements Arm{
     }
 
     public void slideStop(boolean stop) {
-        /*
-        Code to stop
-        the parameter is the condition to stop
-         */
+        if (stop) {
+            /*
+            Code to stop
+            the parameter is the condition to stop
+            */
+        }
     }
 
     public void setArm(double ticks) {
