@@ -7,9 +7,6 @@ import org.firstinspires.ftc.teamcode.Parts;
 import org.firstinspires.ftc.teamcode.parts.ArmTemplate;
 import org.firstinspires.ftc.teamcode.parts.ClawTemplate;
 import org.firstinspires.ftc.teamcode.parts.DriveTemplate;
-import org.firstinspires.ftc.teamcode.parts.KnightmaresDrive;
-import org.firstinspires.ftc.teamcode.parts.KnightmaresClaw;
-import org.firstinspires.ftc.teamcode.parts.KnightmaresArm;
 
 /**
  * This is the general structure for an autonomous
