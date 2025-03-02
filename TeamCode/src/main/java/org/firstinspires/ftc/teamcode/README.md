@@ -29,3 +29,26 @@ Type `git remote add upstream https://github.com/FIRST-Tech-Challenge/FtcRobotCo
 - Next step is to use `git merge upstream/master --commit -m "merge from upstream"`
 
 - Perfect. To finalize it just use `git push origin master`
+
+The command line should look like this:
+```
+git remote add upstream https://github.com/FIRST-Tech-Challenge/FtcRobotControllerhttps://github.com/FIRST-Tech-Challenge/FtcRobotController
+git fetch upstream
+git merge upstream/main --commit -m "merge from upstream"
+git push origin main
+```
+## Updating the other two repos
+You do the same thing, but make sure that the upstream link is https://github.com/Trivium-Prep-Robotics/Trivium-Robotics instead
+
+## What is in this repo?
+This is good skeleton code to start the season.
+
+- The [teleOp folder](https://github.com/Trivium-Prep-Robotics/Trivium-Robotics/tree/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/teleOp) already has skeleton teleOp code that already has field centric drive and imports the parts, arm, claw, and drive classes that are used.
+- The [auto folder](https://github.com/Trivium-Prep-Robotics/Trivium-Robotics/tree/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/teleOp) already has skeleton auto code as well.
+### [Parts](https://github.com/Trivium-Prep-Robotics/Trivium-Robotics/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Parts.java)
+This class has the robot configured in it. 
+- The drive train motors all you have to do is change their name to what is in the control hub configuration.
+- Has other motors as well like piv1, piv2, and slides
+  - Simply delete this and add in the motors you use, these are what our robot had and I left them as an example of other motors
+- Servo
+  - We have the claw and wrist servo, again delete these and put any servos that you use instead.
