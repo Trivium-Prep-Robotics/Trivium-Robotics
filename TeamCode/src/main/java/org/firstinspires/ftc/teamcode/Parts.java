@@ -67,6 +67,7 @@ public class Parts {
         slide = hardwareMap.get(DcMotor.class, "slide");
 
         // TODO: reverse any motors you need
+        // we had two motors for our pivot
         piv1.setDirection(DcMotorSimple.Direction.REVERSE);
         piv2.setDirection(DcMotorSimple.Direction.REVERSE);
 
