@@ -65,8 +65,10 @@ public class teleOpTemplate extends LinearOpMode {
             bot.specimen(gamepad2.y);
             bot.sample(gamepad2.a);
 
-            // the particular buttons for field centric drive are just in the method, so the only parameter you need is the gamepad you want the controls on
+            // sets field centric drive, if you would like robot centric or tank uncomment which one you want but make sure no more than one is uncommented
             bot.feildCentric(gamepad1);
+//            bot.robotCentric(gamepad1);
+//            bot.tankDrive(gamepad1);
         }
     }
 }
