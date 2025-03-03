@@ -11,6 +11,7 @@ import com.qualcomm.robotcore.hardware.ServoImplEx;
 public class Parts {
 
     // declaring parts
+    // TODO: get rid of and/or add any parts you need
     public static DcMotor FR, FL, BR, BL;
     public static DcMotor piv1, piv2;
     public static DcMotor slide;
@@ -67,6 +68,7 @@ public class Parts {
         slide = hardwareMap.get(DcMotor.class, "slide");
 
         // TODO: reverse any motors you need
+        // we had two motors for our pivot
         piv1.setDirection(DcMotorSimple.Direction.REVERSE);
         piv2.setDirection(DcMotorSimple.Direction.REVERSE);
 
