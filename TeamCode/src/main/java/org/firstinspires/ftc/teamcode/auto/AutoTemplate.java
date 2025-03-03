@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.teamcode.Parts;
-import org.firstinspires.ftc.teamcode.parts.OurRobot;
+import org.firstinspires.ftc.teamcode.util.OurRobot;
 
 /**
  * This is the general structure for an autonomous
