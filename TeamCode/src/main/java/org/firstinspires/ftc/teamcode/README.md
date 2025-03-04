@@ -58,7 +58,7 @@ Interfaces, Robot class, and other util
 - [[Arm interface]((https://github.com/Trivium-Prep-Robotics/Trivium-Robotics/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/util/Arm.java)
   - Methods for a robot with pivot and extend
 - [Claw interface](https://github.com/Trivium-Prep-Robotics/Trivium-Robotics/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/parts/Claw.java)
-  - Methods for a claw witha wrist
+  - Methods for a claw with a wrist
 - [Drive interface](https://github.com/Trivium-Prep-Robotics/Trivium-Robotics/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/util/Drive.java) drive methods.
 - [Robot](https://github.com/Trivium-Prep-Robotics/Trivium-Robotics/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/util/Robot.java) is the class with all the methods, implement all the interfaces you use, and define all of them (IF YOU DON'T USE THEM LEAVE THEM BLANK, BUT STILL HAVE THEM).
 - Add any interfaces and classes you would like depending on what your robot is. The one I would recommend using generally all the time is the drive one until you are advanced enough to use something such as RoadRunner or Pedro Pathing.
