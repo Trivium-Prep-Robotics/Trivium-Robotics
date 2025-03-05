@@ -3,7 +3,6 @@ package org.firstinspires.ftc.teamcode.util;
 import com.qualcomm.robotcore.hardware.Gamepad;
 
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
-import org.firstinspires.ftc.teamcode.Parts;
 
 /**
  * example class for a robot that implements the interfaces

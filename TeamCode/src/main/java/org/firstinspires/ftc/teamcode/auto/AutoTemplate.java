@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.auto;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-import org.firstinspires.ftc.teamcode.Parts;
+import org.firstinspires.ftc.teamcode.util.Parts;
 import org.firstinspires.ftc.teamcode.util.Robot;
 
 /**
