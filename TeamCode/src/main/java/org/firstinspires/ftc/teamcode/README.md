@@ -74,6 +74,9 @@ Interfaces, Robot class, and other util
 - [ ] Arrays
 - [ ] Methods
 - [ ] Object Oriented Programming
+  - [ ] Creating classes that interact with each other
+  - [ ] Object inheritance
+  - [ ] Keywords: public, private, static, extends
 - [Game Manual 0 - software](https://gm0.org/en/latest/docs/software/index.html#) - this is an amazing source for FTC specific coding basics, concepts, etc. Even outside of the software section gm0 is a great source for everything FTC.
 - [Pedro Pathing](https://pedropathing.com/) - this is the documentation for Pedro Pathing.
 - [RoadRunner](https://rr.brott.dev/docs/v1-0/installation/) - documentation for RoadRunner use (at the moment this documentation sucks).
