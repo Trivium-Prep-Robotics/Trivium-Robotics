@@ -67,7 +67,13 @@ Interfaces, Robot class, and other util
 
 # Coding sources
 - [w3schools java](https://www.w3schools.com/java/default.asp) - great source for understanding java concepts.
-- [Codecademy java course](https://www.codecademy.com/learn/learn-java) - if you want to take an intro course to java.
+- [Codecademy java course](https://www.codecademy.com/learn/learn-java) - if you want to take an intro course to java, but if you want to learn from videos or just need basic skills for ftc programming, here's a checklist:
+- [ ] Variables
+- [ ] If Statements
+- [ ] While/For Loops
+- [ ] Arrays
+- [ ] Methods
+- [ ] Object Oriented Programming
 - [Game Manual 0 - software](https://gm0.org/en/latest/docs/software/index.html#) - this is an amazing source for FTC specific coding basics, concepts, etc. Even outside of the software section gm0 is a great source for everything FTC.
 - [Pedro Pathing](https://pedropathing.com/) - this is the documentation for Pedro Pathing.
 - [RoadRunner](https://rr.brott.dev/docs/v1-0/installation/) - documentation for RoadRunner use (at the moment this documentation sucks).
