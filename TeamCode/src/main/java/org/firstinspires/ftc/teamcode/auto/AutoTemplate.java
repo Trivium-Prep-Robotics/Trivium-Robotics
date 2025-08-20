@@ -20,14 +20,14 @@ public class AutoTemplate extends LinearOpMode {
         waitForStart();
         // this is a example of a park auto for Into The Deep season, not sure if it supports Decode season as well
         /*
-        FR.setPower(0);
-        FL.setPower(1);
-        BR.setPower(1);
-        BL.setPower(0);
+        FR.setPower(0); // front right wheel isn't on
+        FL.setPower(1); // front left wheel is on
+        BR.setPower(1); // back right wheel is on
+        BL.setPower(0);// back left wheel isn't on
 
-        sleep(2500);
+        sleep(2500); // waits for 25 seconds
 
-
+        // turns the wheels off
         FR.setPower(0);
         FL.setPower(0);
         BR.setPower(0);
