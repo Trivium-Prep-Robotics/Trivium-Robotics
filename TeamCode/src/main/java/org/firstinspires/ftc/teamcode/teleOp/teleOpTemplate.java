@@ -66,6 +66,7 @@ public class teleOpTemplate extends LinearOpMode {
             robot.sample(gamepad2.a);
 
             // sets field centric drive, if you would like robot centric or tank uncomment which one you want but make sure no more than one is uncommented
+            // pedro pathing also have a field centric drive btw
             robot.feildCentric(gamepad1);
 //            robot.robotCentric(gamepad1);
 //            robot.tankDrive(gamepad1);
